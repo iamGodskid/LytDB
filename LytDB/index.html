@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+   <script src="dist/lyt.db.js" type="text/javascript" charset="utf-8"></script>
+ <script src="Giniparser/dist/gini.js" type="text/javascript" charset="utf-8"></script>
+   <script src="Giniparser/dist/jsontogini.js" type="text/javascript" charset="utf-8"></script>
+    <title></title>
+  </head>
+  <body>
+   
+   
+   <script type="text/javascript" charset="utf-8">
+   var s="code";
+    var r={};
+    r[s]={
+      name:s,
+      age:"nan"
+    }
+     const x=new lytDB();
+
+    x.connect("user", "1234")
+    x.query("affix", {
+     dbname: "user",
+ keys:[s],
+   affix:["name", "codey"]
+     //data:r
+     }).then(res=>{
+       
+       document.write(res)
+     })
+   </script> 
+  </body>
+</html>
